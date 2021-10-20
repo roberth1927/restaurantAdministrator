@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-nopagefount',
   templateUrl: './nopagefount.component.html',
-  styles: [
-  ]
+  styleUrls: ['./nopagefount.component.css']
+
 })
-export class NopagefountComponent implements OnInit {
+export class NopagefountComponent {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  anio = new Date().getFullYear();
+
+
 
 }
