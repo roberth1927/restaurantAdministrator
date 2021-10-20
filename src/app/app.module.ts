@@ -5,10 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
-//import { Approutes } from './app-routing.module';
-
-
-
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -23,7 +19,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { ProgressComponent } from './pages/progress/progress.component';
 import { Grafica1Component } from './pages/grafica1/grafica1.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { PagesComponent } from './pages/pages.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -31,7 +27,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   wheelPropagation: true,
   minScrollbarLength: 20
 };
-
 
 @NgModule({
   declarations: [
@@ -45,17 +40,15 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DashboardComponent,
     ProgressComponent,
     Grafica1Component,
+    PagesComponent,
 
   ],
   imports: [
-
     BrowserModule,
     HttpClientModule,
     NgbModule,
 	  PerfectScrollbarModule,
     AppRoutingModule
-
-  //  RouterModule.forRoot(Approutes, { useHash: false, relativeLinkResolution: 'legacy' })
   ],
   providers: [
     {
