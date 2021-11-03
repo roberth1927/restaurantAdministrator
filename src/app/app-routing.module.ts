@@ -5,11 +5,11 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { NopagefountComponent } from './nopagefount/nopagefount.component';
 import { PagesRoutingModulo } from './pages/pages.routing';
+import { AuthRoutingModule } from './auth/auth.routing';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
 
+  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   {path: '**', component: NopagefountComponent},
 ]
 
@@ -18,6 +18,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     PagesRoutingModulo,
+    AuthRoutingModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
